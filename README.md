@@ -4,6 +4,6 @@ A set of challenges to study AI concepts, strategies and implementations. Inspir
 
 ## Chapters 
 
-- [ ] 1 - Open AI RAG 
+- [x] 1 - Open AI RAG
 - [ ] 2 - Naive RAG 
 - [ ] 3 - Naive Rag with LangChain
