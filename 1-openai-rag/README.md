@@ -1,13 +1,13 @@
 # 1 - OpenAI RAG 
 
 In this chapter we use completely OpenAI to provide a retrieve augmented generation process.
-The code is split in two parts: ingestion and retrieval. 
+The code is split in two parts: indexing and retrieval. 
 
 ### Requirements
 
 * Go 1.25+
 
-### ingestion
+### indexing
 
 1. Go to OpenAI dashboard and create a vector storage and a api key.
 2. Rename .env.template to .env adding the information required.
