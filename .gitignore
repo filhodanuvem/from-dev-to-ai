@@ -1,1 +1,5 @@
 .env
+.nwave
+.claude
+.agents
+.vscode

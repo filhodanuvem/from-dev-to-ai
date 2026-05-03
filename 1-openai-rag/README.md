@@ -3,6 +3,10 @@
 In this chapter we use completely OpenAI to provide a retrieve augmented generation process.
 The code is split in two parts: ingestion and retrieval. 
 
+### Requirements
+
+* Go 1.25+
+
 ### ingestion
 
 1. Go to OpenAI dashboard and create a vector storage and a api key.
