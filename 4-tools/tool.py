@@ -15,14 +15,21 @@ def get_monster_type(id_or_name: str) -> list[str]:
     data = response.json()
     return [entry["type"]["name"] for entry in data["types"]]
 
+@tool
+def sum_numbers(numbers: list[float]) -> float:
+    """Returns the sum of a list of numbers."""
+    return sum(numbers)
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument("query", help="Question to answer about")
 args = parser.parse_args()
 
+tools = [get_monster_type, sum_numbers]
+tools_by_name = {t.name: t for t in tools}
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-llm_with_tools = llm.bind_tools([get_monster_type])
+llm_with_tools = llm.bind_tools([get_monster_type, sum_numbers])
 
-tools_by_name = {get_monster_type.name: get_monster_type}
 
 response = llm_with_tools.invoke(args.query)
 
