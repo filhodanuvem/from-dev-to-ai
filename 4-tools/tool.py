@@ -30,7 +30,6 @@ tools_by_name = {t.name: t for t in tools}
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 llm_with_tools = llm.bind_tools([get_monster_type, sum_numbers])
 
-
 response = llm_with_tools.invoke(args.query)
 
 if response.tool_calls:
